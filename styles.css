@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Pastikan body memenuhi viewport */
+    margin: 0; /* Menghapus margin default dari body */
+    background-color: #e6e6fa;
+    color: #fff;
+    scroll-behavior: smooth; /* Smooth scrolling untuk anchor links */
+}
+
+.navbar {
+    background-color: #f8d7da; /* Soft pink */
+    z-index: 1000; /* Menjaga navbar tetap di atas konten */
+    font-weight: bold;;
+}
+
+.navbar-brand, .nav-link {
+    color: #333 !important; /* Dark text */
+}
+
+.nav-link:hover {
+    color: #000 !important; /* Darker text on hover */
+}
+
+section {
+    height: 100vh; /* Setiap section memenuhi satu layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h3 {
+    font-family: 'Dancing Script', cursive; /* Cute font for section titles */
+    margin-bottom: 20px;
+    font-size: 4rem;
+}
+
+p {
+    font-family: 'Lobster', cursive;
+
+}
+
+
+#home {
+    background-color: #e6e6fa; /* Soft pink */
+    color: #636363;
+    padding-top: 100px; /* Menambahkan jarak dari navbar */
+}
+
+#about {
+    background-color: #98FF98; /* Light background */
+    color: #000;
+}
+
+#gallery {
+    background-color: #ffb0b7; /* Background color for other sections */
+    color: #6b6b6b; /* Text color */
+}
+
+ #story {
+    background-color: #e6e6; /* Background color for other sections */
+    color: #000; /* Text color */
+}
+
+ #wish {
+    background-color: #464646; /* Background color for other sections */
+    color: #ffb0b7; /* Text color */
+}
+
+footer {
+    background-color: #f8d7da; /* Soft pink */
+    padding: 20px 0;
+    text-align: center;
+    color: #333;
+}
+
+/* Kelas untuk card dengan warna latar belakang */
+.card-body {
+    background-color: #000000; /* Blue */
+    color: #fff;
+}
+
+.card-header {
+    background-color: #f8d7da; /* Gray */
+    color: #5e5e5e;
+}
+
+.carousel {
+    max-width: 250px; /* Atur lebar maksimum carousel */
+    margin: auto; /* Pusatkan carousel */
+    position: relative; /* Membantu dalam pengaturan rasio */
+}
+
+.carousel-inner {
+    position: relative; /* Membantu dalam pengaturan rasio */
+    width: 100%;
+    padding-bottom: 177.78%; /* Padding untuk rasio 9:16 (100 / (9 / 16) = 177.78%) */
+    height: 0;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute; /* Posisi absolute untuk mengatur gambar dengan benar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar menutupi area yang tersedia */
+}
+
+.card-body-1{
+    background-color: #e6e6fa; /* Soft pink */
+    color: #6b6b6b;
+}
+
+.card-title{
+    background-color: #ffb0b7;
+    color: #5e5e5e;
+}
+
+.card-text{
+    background-color: #6e6e6e;
+    color: #ffffff;
+}
+
+.card-body-2{
+    background-color: #5e5e5e; /* Light background */
+    color: #000;
+}
+
+/* Reset untuk elemen yang mungkin bermasalah di layar kecil */
+body, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Query untuk layar kecil */
+@media (max-width: 768px) {
+    section {
+        height: auto; /* Setiap section memenuhi satu layar */
+    display: flex;
+    flex-direction: column; /* Mengatur elemen di dalam section secara vertikal */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    }
+
+    h3 {
+        font-size: 2.5rem; /* Ukuran font yang lebih kecil untuk judul */
+        margin-bottom: 10px; /* Kurangi jarak bawah */
+    }
+
+    p {
+        font-size: 1rem; /* Ukuran font yang lebih kecil untuk paragraf */
+    }
+
+    .navbar {
+        padding: 10px; /* Kurangi padding navbar */
+    }
+
+    .card {
+        width: 100%; /* Atur card agar lebar 100% pada layar kecil */
+        margin-bottom: 20px; /* Tambah jarak bawah antar card */
+    }
+
+    .carousel {
+        max-width: 100%; /* Atur lebar carousel menjadi 100% */
+        margin: auto; /* Pusatkan carousel */
+    }
+
+    .carousel-inner {
+        position: relative; /* Membantu dalam pengaturan rasio */
+        width: 100%;
+        padding-bottom: 75%; /* Ubah rasio carousel menjadi 3:4 untuk layar kecil */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .carousel-item {
+        position: absolute; /* Posisi absolute untuk mengatur gambar dengan benar */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Memastikan gambar menutupi area yang tersedia */
+    }
+
+    .card-body-1 {
+        background-color: #e6e6fa; /* Background untuk card body */
+        color: #6b6b6b;
+    }
+
+    .card-body-2 {
+        background-color: #6b6b6b; /* Background untuk card body */
+        color: #6b6b6b;
+    }
+
+    .card-title {
+        background-color: #ffb0b7;
+        color: #5e5e5e;
+    }
+
+    .card-text {
+        background-color: #6e6e6e;
+        color: #ffffff;
+    }
+}
+
+/* Media Query untuk layar ekstra kecil (telepon pintar) */
+@media (max-width: 480px) {
+    .navbar-brand, .nav-link {
+        font-size: 0.9rem; /* Ukuran font navbar yang lebih kecil */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Ukuran font judul yang lebih kecil */
+    }
+
+    p {
+        font-size: 0.9rem; /* Ukuran font paragraf yang lebih kecil */
+    }
+
+    .carousel {
+        max-width: 200px; /* Atur lebar maksimum carousel */
+        margin: auto; /* Pusatkan carousel */
+        position: relative; /* Membantu dalam pengaturan rasio */
+    }
+    
+    .carousel-inner {
+        position: relative; /* Membantu dalam pengaturan rasio */
+        width: 100%;
+        padding-bottom: 177.78%; /* Padding untuk rasio 9:16 (100 / (9 / 16) = 177.78%) */
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .carousel-item {
+        position: absolute; /* Posisi absolute untuk mengatur gambar dengan benar */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
